@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes cursor {
+    0%{
+        border-color: transparent;
+    }
+    100%{
+        border-color: white;
+    }
+}
+
+@keyframes typing {
+    0%{
+        width: 0ch;
+    }
+    100%{
+        width: 17ch
+    }
+}
+
+.typing{
+    animation: cursor 400ms ease-in-out infinite alternate, typing 2s steps(20)  infinite alternate;
+}
+
+.icon::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    border-radius: 100%;
+    z-index: -10;
+    height: 100%;
+    background-color: red;
+    transition: 500ms;
+}
+
+.icon:hover::before{
+   
+    width: 100%;
+    
+}
+
+.navContent::before{
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    transition: all 0.5s;
+}
+
+.navContent:hover::before{
+    width: 100%;
+    left: 0;
+}
