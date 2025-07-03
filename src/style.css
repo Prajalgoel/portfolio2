@@ -24,20 +24,20 @@
     animation: cursor 400ms ease-in-out infinite alternate, typing 2s steps(20)  infinite alternate;
 }
 
-.icon::before{
+.icon::before, .projectCard::before{
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 0%;
-    border-radius: 100%;
+    
     z-index: -10;
     height: 100%;
     background-color: red;
-    transition: 500ms;
+    transition: 600ms;
 }
 
-.icon:hover::before{
+.icon:hover::before, .projectCard:hover::before{
    
     width: 100%;
     
@@ -57,4 +57,10 @@
 .navContent:hover::before{
     width: 100%;
     left: 0;
+}
+
+.projectCard:hover .projectLink{
+    display: block;
+    opacity: 1;
+   
 }

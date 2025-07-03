@@ -1,65 +1,151 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-  </head>
-  <body class="bg-slate-900 overflow-x-hidden">
-    <div class="wholecontainer h-full mx-auto text-white ">
 
-      <nav class="py-3 flex justify-between items-center h-[10vh] w-screen px-20 sticky top-0 bg-black">
-        <span class="name text-3xl font-bold">Prajal</span>
-        <ul class="navContents flex gap-x-14 font-bold text-xl">
-          <li class="homeNav navContent relative  hover:text-yellow-400 transition-all duration-200 cursor-pointer hover:scale-110">Home</li>
-          <li class="aboutNav navContent  relative hover:text-yellow-400 transition-all duration-200 cursor-pointer hover:scale-110">About</li>
-          <li class="skillsNav navContent relative  hover:text-yellow-400 transition-all duration-200 cursor-pointer hover:scale-110">Skills</li>
-          <li class="contactNav navContent  relative hover:text-yellow-400 transition-all duration-200 cursor-pointer hover:scale-110">Contact Me</li>
-        </ul>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+</head>
 
-      <main class="w-[80vw] mx-auto ">
+<body class="bg-slate-900 overflow-x-hidden">
+  <div class="wholecontainer h-full mx-auto text-white ">
 
-        <section class="home h-screen scroll-mt-[10vh]  flex justify-center items-center gap-x-24">
-          <div class="homeLeft w-[60%] flex flex-col gap-y-3">
-            <div class="homeIntro text-5xl">Hi, I am Prajal Goel</div>
-            <div class="typing text-5xl text-yellow-400 border-r-2 border-r-white overflow-hidden text-nowrap w-[0ch] px-2 box-content">FrontEnd Developer</div>
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores accusamus minus quibusdam sunt, aliquam nesciunt corporis! Blanditiis autem, at fuga omnis in ullam error nam doloremque minima libero quibusdam ducimus.</div>
+    <nav class="py-3 flex justify-between items-center h-[10vh] w-screen px-20 sticky top-0 bg-black z-30 text-white">
+      <span class="name text-3xl font-bold">Prajal</span>
+      <ul class="navContents flex gap-x-14 font-bold text-xl">
+        <li id="Home"
+          class=" navContent relative  hover:text-yellow-400 transition-all duration-200 cursor-pointer hover:scale-110">
+          Home</li>
+        <li id="About"
+          class=" navContent  relative hover:text-yellow-400 transition-all duration-200 cursor-pointer hover:scale-110">
+          About</li>
+        <li id="Projects"
+          class=" navContent relative  hover:text-yellow-400 transition-all duration-200 cursor-pointer hover:scale-110">
+          Projects</li>
+        <li id="Contact"
+          class=" navContent  relative hover:text-yellow-400 transition-all duration-200 cursor-pointer hover:scale-110">
+          Contact Me</li>
+      </ul>
+    </nav>
 
-            <div class="contactIcons flex gap-6 mt-3">
-              <div class="github icon overflow-hidden  relative bg-blue-500 w-fit rounded-full p-1 hover:scale-110 hover:bg-white transition-all flex justify-center items-center z-10">
-                <a href="https://github.com/Prajalgoel" target="_blank"><img src="/svg/github.svg" alt=""></a>
-              </div>
-              <div class="linkedin icon overflow-hidden  relative bg-blue-500 w-fit rounded-full p-1 hover:scale-110 hover:bg-white transition-all flex justify-center items-center z-10">
-                <a href="https://www.linkedin.com/in/prajal-goel-4ab029215/" target="_blank"><img src="/svg/linkedin.svg" alt=""></a>
-              </div>
-              <div class="twitter icon  overflow-hidden relative bg-blue-500 w-fit rounded-full p-1 hover:scale-110 hover:bg-white transition-all flex justify-center items-center z-10">
-                <a href="https://x.com/GoelPrajal" target="_blank"><img src="/svg/x.svg" alt=""></a>
-              </div>
-              <div class="leetcode icon overflow-hidden  relative bg-blue-500 w-fit rounded-full p-1 hover:scale-110 hover:bg-white transition-all flex justify-center items-center z-10">
-                <a href="https://leetcode.com/u/prajalgoel12/" target="_blank"><img src="/svg/leetcode.svg" alt=""></a>
-              </div>
-              
-            </div>
-          </div>
-
-          <div class="homeRight w-[40%] h-[300px]">
-            <img class="object-cover rounded-lg" src="https://eduauraapublic.s3.ap-south-1.amazonaws.com/webassets/images/blogs/how-to-become-a-programmer-in-india.jpg" alt="">
-          </div>
-        </section>
-
-        <section class="about flex flex-col justify-center items-center gap-10 py-9">
-          <h1 class="text-7xl font-bold">About Me</h1>
-          <img class="w-[300px] h-[300px] rounded-full object-cover]" src="https://eduauraapublic.s3.ap-south-1.amazonaws.com/webassets/images/blogs/how-to-become-a-programmer-in-india.jpg" alt="">
-          <div class="font-bold text-4xl">FrontEnd Developer</div>
-          <div class=" text-lg text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores inventore mollitia aperiam soluta at illo ipsam ea iure? Nesciunt excepturi pariatur ipsa sunt dolorem similique inventore facere nisi porro consequuntur.</div>
-        </section>
-
-
-      </main>
+    <div class="theme fixed top-[15vh]  p-3 right-[7vw] z-50 flex items-center justify-center gap-3 bg-yellow-600 rounded-xl ">
+      <div class="themeSwitch relative cursor-pointer w-[50px] ">
+        <div class="themeSwitchBar bg-blue-600  h-[18px] rounded-xl w-full transition-all duration-300"></div>
+        <div class="themeSwitchCircle absolute bg-white p-2 rounded-full top-0 right-0 transition-all duration-300"></div>
+      </div>
+      <div class="themeName font-bold text-lg transition-all duration-300">Dark Mode</div>
     </div>
 
-    <script type="module" src="/src/main.js"></script>
-  </body>
+    <main class="w-[80vw] mx-auto ">
+
+      <section class="Home min-h-screen scroll-mt-[20vh]  flex justify-center items-center gap-x-24 ">
+        <div class="homeLeft w-[60%] flex flex-col gap-y-3">
+          <div class="homeIntro text-5xl font-bold">Hi, I am Prajal Goel</div>
+          <div
+            class="typing text-5xl text-yellow-400 font-bold border-r-2 border-r-white overflow-hidden text-nowrap w-[0ch] px-2 box-content">
+            FrontEnd Developer</div>
+          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores accusamus minus quibusdam sunt, aliquam
+            nesciunt corporis! Blanditiis autem, at fuga omnis in ullam error nam doloremque minima libero quibusdam
+            ducimus.</div>
+
+          <div class="contactIcons flex gap-6 mt-3">
+            <div
+              class="github icon overflow-hidden  relative bg-blue-500 w-fit rounded-full p-1 hover:scale-110 hover:bg-white transition-all flex justify-center items-center z-10">
+              <a href="https://github.com/Prajalgoel" target="_blank"><img src="/svg/github.svg" alt=""></a>
+            </div>
+            <div
+              class="linkedin icon overflow-hidden  relative bg-blue-500 w-fit rounded-full p-1 hover:scale-110 hover:bg-white transition-all flex justify-center items-center z-10">
+              <a href="https://www.linkedin.com/in/prajal-goel-4ab029215/" target="_blank"><img src="/svg/linkedin.svg"
+                  alt=""></a>
+            </div>
+            <div
+              class="twitter icon  overflow-hidden relative bg-blue-500 w-fit rounded-full p-1 hover:scale-110 hover:bg-white transition-all flex justify-center items-center z-10">
+              <a href="https://x.com/GoelPrajal" target="_blank"><img src="/svg/x.svg" alt=""></a>
+            </div>
+            <div
+              class="leetcode icon overflow-hidden  relative bg-blue-500 w-fit rounded-full p-1 hover:scale-110 hover:bg-white transition-all flex justify-center items-center z-10">
+              <a href="https://leetcode.com/u/prajalgoel12/" target="_blank"><img src="/svg/leetcode.svg" alt=""></a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="homeRight w-[40%] h-[300px]">
+          <img class="object-cover rounded-lg"
+            src="https://eduauraapublic.s3.ap-south-1.amazonaws.com/webassets/images/blogs/how-to-become-a-programmer-in-india.jpg"
+            alt="">
+        </div>
+      </section>
+
+      <section class="About flex flex-col justify-center items-center gap-10 min-h-screen scroll-mt-[4vh] ">
+        <h1 class="text-7xl font-bold">About Me</h1>
+        <img class="w-[300px] h-[300px] rounded-full object-cover"
+          src="https://eduauraapublic.s3.ap-south-1.amazonaws.com/webassets/images/blogs/how-to-become-a-programmer-in-india.jpg"
+          alt="">
+        <div class="font-bold text-4xl">FrontEnd Developer</div>
+        <div class=" text-lg text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores inventore
+          mollitia aperiam soluta at illo ipsam ea iure? Nesciunt excepturi pariatur ipsa sunt dolorem similique
+          inventore facere nisi porro consequuntur.</div>
+      </section>
+
+      <section class="Projects flex flex-col justify-center items-center gap-14  min-h-screen ">
+        <h1 class="text-7xl font-bold">Projects</h1>
+        <div class="projectsContainer flex flex-wrap gap-8 justify-center w-[100vw]">
+
+        </div>
+
+      </section>
+
+      <section class="Contact flex py-20 gap-14  w-full">
+        <div class="contactleft w-1/2 flex flex-col items-start gap-4">
+
+          <h1 class="text-7xl font-bold">Contact Me</h1>
+
+          <div class="font-bold text-xl flex flex-col gap-4">
+
+            <div class="contactIcons flex gap-6 mt-3">
+              <div
+                class="github icon overflow-hidden  relative bg-blue-500 w-fit rounded-full p-1 hover:scale-110 hover:bg-white transition-all flex justify-center items-center z-10">
+                <a href="https://github.com/Prajalgoel" target="_blank"><img src="/svg/github.svg" alt=""></a>
+              </div>
+              <div
+                class="linkedin icon overflow-hidden  relative bg-blue-500 w-fit rounded-full p-1 hover:scale-110 hover:bg-white transition-all flex justify-center items-center z-10">
+                <a href="https://www.linkedin.com/in/prajal-goel-4ab029215/" target="_blank"><img
+                    src="/svg/linkedin.svg" alt=""></a>
+              </div>
+              <div
+                class="twitter icon  overflow-hidden relative bg-blue-500 w-fit rounded-full p-1 hover:scale-110 hover:bg-white transition-all flex justify-center items-center z-10">
+                <a href="https://x.com/GoelPrajal" target="_blank"><img src="/svg/x.svg" alt=""></a>
+              </div>
+              <div
+                class="leetcode icon overflow-hidden  relative bg-blue-500 w-fit rounded-full p-1 hover:scale-110 hover:bg-white transition-all flex justify-center items-center z-10">
+                <a href="https://leetcode.com/u/prajalgoel12/" target="_blank"><img src="/svg/leetcode.svg" alt=""></a>
+              </div>
+
+            </div>
+            <div class="phoneNo">8287128997</div>
+            <div class="email">prajalgoel12@gmail.com</div>
+
+          </div>
+        </div>
+
+        <div class="contactRight w-1/2 ">
+          <form action="" class="flex flex-col  gap-4">
+            <input type="text" placeholder="Your Name" class="w-full p-2 outline-none rounded-md text-white placeholder:text-white bg-slate-500  ">
+            <input type="text" placeholder="Your Email" class="w-full p-2 outline-none rounded-md text-white placeholder:text-white bg-slate-500  ">
+            <textarea name="" id="" cols="10" rows="10" placeholder="Enter Message" class="w-full p-2 outline-none rounded-md text-white placeholder:text-white bg-slate-500  "></textarea>
+            <button type="submit" class="bg-red-600 p-3 w-fit self-center rounded-lg text-xl font-bold">Submit</button>
+          </form>
+        </div>
+
+      </section>
+
+
+    </main>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
