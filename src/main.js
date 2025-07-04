@@ -5,8 +5,8 @@ document.querySelectorAll('.navContent').forEach((content) => {
         let title = content.id
         document.querySelector(`.${title}`).scrollIntoView({
             behavior: "smooth",
-            block: "center",
-            inline: "center"
+            block: "start",
+            inline: "start"
         })
     })
 })
@@ -23,9 +23,9 @@ async function getProjects() {
         div.id = response.name
 
         div.innerHTML = `
-        <img src= "${response.image}" class="w-[400px] h-[200px]" alt="">
+        <img src= "${response.image}" class="w-[350px] h-[200px]" alt="">
         <div class="projectName yellowText text-4xl font-bold text-yellow-300">${response.name}</div>
-        <div class="projectLink bg-blue-500 p-3 rounded-lg font-bold text-lg hidden"><a href="${response.link}">Visit Github</a></div>
+        <div class="projectLink bg-blue-500 p-3 rounded-lg font-bold text-lg hidden"><a target= "_blank" href="${response.link}">Visit Github</a></div>
         `
         document.querySelector('.projectsContainer').appendChild(div)
     })
@@ -35,6 +35,7 @@ getProjects()
 
 document.querySelector('form').addEventListener('submit',(e) => {
     e.preventDefault()
+    document.querySelector('form').reset()
 })
 
 document.querySelector('.themeSwitch').addEventListener('click', () => {
@@ -55,4 +56,12 @@ document.querySelector('.themeSwitch').addEventListener('click', () => {
         document.querySelector('.wholecontainer').style.backgroundColor = "#0f172a"
     }
     
+})
+
+document.querySelector('.hamburger').addEventListener('click', () => {
+    document.querySelector('.sideBar').style.right = "0"
+})
+
+document.querySelector('.cross').addEventListener('click', () => {
+    document.querySelector('.sideBar').style.right = "-100%"
 })
